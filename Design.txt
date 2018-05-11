@@ -19,3 +19,10 @@ arrays. Each dictionary key represents a column and the value represents a list
 of values v1, v4.. from the tabular structure. This data representation is
 trivial to implement and has the added advantage of being efficient in both
 projection and stepwise refinement of selection logic. 
+
+code - 
+  core.py - class adf - init => 
+        self.data == data structure for adf 
+                -- transforms - return new adf with new self.data
+                -- io -- readers - TBD
+  
