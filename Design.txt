@@ -20,6 +20,20 @@ of values v1, v4.. from the tabular structure. This data representation is
 trivial to implement and has the added advantage of being efficient in both
 projection and stepwise refinement of selection logic. 
 
+
+Code Structure
+==============
+The Adf class specified in adf/core.py will contain the dataframe transformation
+operations and read and write into the core ADF data structure as specified
+above.
+
+Readers from various file formats are independant of the core and are written in
+readers.py. All functions defined therein are generators, yielding a single
+record at a time as a dictionary. This ensures that each record holds the
+complete schema by itself making the core's read function reasonable.
+
+
+
 code - 
   core.py - class adf - init => 
         self.data == data structure for adf 
