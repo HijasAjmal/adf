@@ -14,3 +14,13 @@ def read_csv(filename):
         for row in reader:
             # The generator should help with the memory management somewhat
             yield row
+
+def base_reader(reader):
+    """
+
+    :param reader:
+    :return:
+    """
+    for row in reader:
+        # The generator should help with the memory management somewhat
+        yield row
